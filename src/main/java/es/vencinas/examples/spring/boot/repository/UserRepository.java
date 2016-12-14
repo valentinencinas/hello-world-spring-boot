@@ -8,6 +8,6 @@ import es.vencinas.examples.spring.boot.dao.User;
 
 public interface UserRepository extends JpaRepository<User, Long> {
 
-    // select * from user where name = :name
-    public Collection<User> findAllByName(String name);
+    // select * from user where firstname = :name
+    public Collection<User> findAllByFirstname(String name);
 }
