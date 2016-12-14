@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost/examples_schema?&useSSL=false 
+    username: userTest
+    password: 1234
+    driver-class-name: com.mysql.jdbc.Driver
+    dbcp2:
+      test-on-borrow: true
+      validation-query: SELECT 1
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
