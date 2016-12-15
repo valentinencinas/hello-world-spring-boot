@@ -15,9 +15,9 @@ public interface UserRepository extends JpaRepository<UserDAO, Long> {
 
     // select * from UserDAO where firstname = :name
     @RestResource(path = "by-firstname")
-    public Collection<UserDAO> findAllByFirstname(String name);
+    public Collection<UserDAO> findAllByFirstname(@Param("name") String name);
 
     @RestResource(path = "by-lower-firstname")
     @Query("from UserDAO where lower(firstname) like lower(?1)")
-    UserDAO findByNameWithQuery(@Param("firstname") String name);
+    UserDAO findByNameWithQuery(@Param("name") String name);
 }
